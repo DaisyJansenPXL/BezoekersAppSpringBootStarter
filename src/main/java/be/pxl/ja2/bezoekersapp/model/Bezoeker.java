@@ -1,15 +1,21 @@
 package be.pxl.ja2.bezoekersapp.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+@Entity
 public class Bezoeker {
+	@Id
 	private Long id;
 	private String naam;
 	private String voornaam;
 	private String telefoonnummer;
 	private LocalTime tijdstip;
+	@OneToOne
 	private Patient patient;
 	private LocalDateTime aanmelding;
 

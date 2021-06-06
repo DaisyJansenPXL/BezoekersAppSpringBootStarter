@@ -1,6 +1,11 @@
 package be.pxl.ja2.bezoekersapp.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Afdeling {
+	@Id
 	private String code;
 	private String naam;
 
